@@ -14,6 +14,11 @@ button {
   cursor: pointer;
 }
 
+html {
+  overflow-y: scroll;
+  overflow-y: overlay;
+}
+
 html,
 body {
   height: 100%;
@@ -39,6 +44,10 @@ a {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+.img {
+  vertical-align: top;
 }
 
 .container {
