@@ -1,0 +1,64 @@
+.our-friends {
+  background: #f6f6f6;
+}
+
+.our-friends__wrapper {
+  padding: 80px 0 100px;
+}
+
+.our-friends__title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  /* or 45px */
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin: 0 auto;
+  //padding-top: 80px;
+
+  color: #545454;
+}
+
+.our-friends__slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-list__wrapper {
+  display: flex;
+  gap: 90px;
+}
+
+.slider__img {
+  border-radius: 9px 9px 0px 0px;
+}
+
+.card__description {
+  background: #fafafa;
+  text-align: center;
+}
+
+.card__pets-name {
+  padding: 30px 0;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.card__btn {
+  padding-bottom: 30px;
+}
+
+.our-friends__bottom-btn {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}

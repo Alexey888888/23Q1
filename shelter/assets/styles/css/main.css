@@ -45,7 +45,7 @@ a {
   font-style: normal;
   font-display: swap;
 }
-.img {
+img {
   vertical-align: top;
 }
 
@@ -53,6 +53,42 @@ a {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.btn {
+  padding: 15px 45px;
+  border-radius: 100px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  /* identical to box height, or 22px */
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.btn_colored {
+  background: #f1cdb3;
+}
+
+.btn-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px 17px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+}
+
+.btn-arrow.right {
+  transform: rotate(-180deg);
+}
+
+.btn_bordered {
+  padding: 13px 43px;
+  background: #fafafa;
+  border: 2px solid #f1cdb3;
 }
 
 .start-screen {
@@ -147,20 +183,6 @@ a {
   margin-top: 42px;
 }
 
-.btn {
-  padding: 15px 45px;
-  background: #f1cdb3;
-  border-radius: 100px;
-  font-family: "Georgia";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 130%;
-  /* identical to box height, or 22px */
-  letter-spacing: 0.06em;
-  color: #292929;
-}
-
 .about__wrapper {
   display: flex;
   justify-content: space-between;
@@ -169,6 +191,7 @@ a {
 .about__img {
   margin-top: 80px;
   margin-left: 175px;
+  margin-bottom: 100px;
 }
 
 .about__right {
@@ -198,4 +221,67 @@ a {
   /* or 24px */
   color: #4c4c4c;
   width: 430px;
+}
+
+.our-friends {
+  background: #f6f6f6;
+}
+
+.our-friends__wrapper {
+  padding: 80px 0 100px;
+}
+
+.our-friends__title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  /* or 45px */
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin: 0 auto;
+  color: #545454;
+}
+
+.our-friends__slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-list__wrapper {
+  display: flex;
+  gap: 90px;
+}
+
+.slider__img {
+  border-radius: 9px 9px 0px 0px;
+}
+
+.card__description {
+  background: #fafafa;
+  text-align: center;
+}
+
+.card__pets-name {
+  padding: 30px 0;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.card__btn {
+  padding-bottom: 30px;
+}
+
+.our-friends__bottom-btn {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
 }
