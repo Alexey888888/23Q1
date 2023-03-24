@@ -24,7 +24,7 @@
   color: #f1cdb3;
 }
 
-.menu__link {
+.menu {
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -32,6 +32,25 @@
   line-height: 160%;
   /* identical to box height, or 24px */
   color: #cdcdcd;
+}
+
+.menu__link {
+  padding-bottom: 4px;
+  transition: all 0.3s;
+}
+
+.menu__link:hover,
+.menu__link:active {
+  color: #fafafa;
+}
+
+.menu__item:first-child {
+  border-bottom: 3px solid #f1cdb3;
+  color: #fafafa;
+}
+
+.menu__link:active {
+  border-bottom: 3px solid #f1cdb3;
 }
 
 .logo {

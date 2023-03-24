@@ -28,6 +28,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
+  scroll-behavior: smooth;
 }
 
 ul li {
@@ -36,6 +37,7 @@ ul li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 @font-face {
@@ -66,10 +68,16 @@ img {
   /* identical to box height, or 22px */
   letter-spacing: 0.06em;
   color: #292929;
+  transition: all 0.4s;
 }
 
 .btn_colored {
   background: #f1cdb3;
+}
+
+.btn_colored:hover {
+  background: #fddcc4;
+  color: #4f4c4c;
 }
 
 .btn-arrow {
@@ -79,6 +87,12 @@ img {
   padding: 21px 17px;
   border: 2px solid #f1cdb3;
   border-radius: 100px;
+  transition: all 0.4s;
+}
+
+.btn-arrow:hover {
+  border-color: #fddcc4;
+  background: #fddcc4;
 }
 
 .btn-arrow.right {
@@ -116,7 +130,7 @@ img {
   color: #f1cdb3;
 }
 
-.menu__link {
+.menu {
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -124,6 +138,25 @@ img {
   line-height: 160%;
   /* identical to box height, or 24px */
   color: #cdcdcd;
+}
+
+.menu__link {
+  padding-bottom: 4px;
+  transition: all 0.3s;
+}
+
+.menu__link:hover,
+.menu__link:active {
+  color: #fafafa;
+}
+
+.menu__item:first-child {
+  border-bottom: 3px solid #f1cdb3;
+  color: #fafafa;
+}
+
+.menu__link:active {
+  border-bottom: 3px solid #f1cdb3;
 }
 
 .logo {
@@ -263,6 +296,7 @@ img {
 .card__description {
   background: #fafafa;
   text-align: center;
+  transition: all 0.9s;
 }
 
 .card__pets-name {
@@ -284,6 +318,20 @@ img {
   margin-top: 60px;
   display: flex;
   justify-content: center;
+}
+
+.slider__card:hover {
+  cursor: pointer;
+}
+
+.slider__card:hover > .card__description {
+  background: #ffffff;
+}
+
+.slider__card:hover > .card__description > .card__btn .btn_bordered {
+  background: #fddcc4;
+  border-color: #fddcc4;
+  color: #4f4c4c;
 }
 
 .help__title {
@@ -349,7 +397,7 @@ img {
 .in-additional__wrapper {
   display: flex;
   justify-content: center;
-  padding: 91px 0 100px 0;
+  padding: 91px 0 99.5px 0;
 }
 
 .in-addition__img {
@@ -386,7 +434,7 @@ img {
   margin-top: 20px;
 }
 
-.credit-card__btn {
+.credit-card {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -403,6 +451,11 @@ img {
   width: 349px;
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s;
+}
+
+.credit-card:hover {
+  background: #fddcc4;
 }
 
 .in-addition__text {
@@ -462,6 +515,11 @@ img {
   color: #f1cdb3;
   display: flex;
   align-items: center;
+  transition: all 0.5s;
+}
+
+.footer__link:hover {
+  color: #fce0cc;
 }
 
 .footer__icon {

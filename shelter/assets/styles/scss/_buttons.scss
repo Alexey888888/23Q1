@@ -9,10 +9,16 @@
   /* identical to box height, or 22px */
   letter-spacing: 0.06em;
   color: #292929;
+  transition: all 0.4s;
 }
 
 .btn_colored {
   background: #f1cdb3;
+}
+
+.btn_colored:hover {
+  background: #fddcc4;
+  color: #4f4c4c;
 }
 
 .btn-arrow {
@@ -22,6 +28,12 @@
   padding: 21px 17px;
   border: 2px solid #f1cdb3;
   border-radius: 100px;
+  transition: all 0.4s;
+}
+
+.btn-arrow:hover {
+  border-color: #fddcc4;
+  background: #fddcc4;
 }
 
 .btn-arrow.right {

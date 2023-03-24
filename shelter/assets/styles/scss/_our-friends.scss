@@ -40,6 +40,7 @@
 .card__description {
   background: #fafafa;
   text-align: center;
+  transition: all 0.9s;
 }
 
 .card__pets-name {
@@ -61,4 +62,21 @@
   margin-top: 60px;
   display: flex;
   justify-content: center;
+}
+
+.slider__card {
+}
+
+.slider__card:hover {
+  cursor: pointer;
+}
+
+.slider__card:hover > .card__description {
+  background: #ffffff;
+}
+
+.slider__card:hover > .card__description > .card__btn .btn_bordered {
+  background: #fddcc4;
+  border-color: #fddcc4;
+  color: #4f4c4c;
 }

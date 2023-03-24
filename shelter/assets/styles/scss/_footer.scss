@@ -45,6 +45,11 @@
   color: #f1cdb3;
   display: flex;
   align-items: center;
+  transition: all 0.5s;
+}
+
+.footer__link:hover {
+  color: #fce0cc;
 }
 
 .footer__icon {

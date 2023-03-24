@@ -28,6 +28,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
+  scroll-behavior: smooth;
 }
 
 ul li {
@@ -36,6 +37,7 @@ ul li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 @font-face {
