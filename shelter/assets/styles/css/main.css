@@ -122,15 +122,23 @@ img {
 
 .btn-pets.left {
   color: #cdcdcd;
+  cursor: default;
 }
 
 .btn-pets.center {
   background: #f1cdb3;
   border-color: #f1cdb3;
+  cursor: default;
 }
 
 .btn-pets.right {
   border-color: #f1cdb3;
+  transition: all 0.5s;
+}
+
+.btn-pets.right:hover {
+  background: #fddcc4;
+  border-color: #fddcc4;
 }
 
 .start-screen {
