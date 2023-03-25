@@ -525,3 +525,21 @@ img {
 .footer__icon {
   margin-right: 20px;
 }
+
+.logo__title.pets,
+.menu__link.pets {
+  color: #545454;
+}
+
+.logo__subtitle.pets,
+.menu__link.pets:hover {
+  color: #292929;
+}
+
+.menu__item:first-child.pets {
+  border-bottom: none;
+}
+
+.menu__item.pets:nth-child(2) {
+  border-bottom: 3px solid #f1cdb3;
+}
