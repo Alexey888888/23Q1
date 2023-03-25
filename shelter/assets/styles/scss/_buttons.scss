@@ -45,3 +45,32 @@
   background: #fafafa;
   border: 2px solid #f1cdb3;
 }
+
+.btn-pets {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  /* identical to box height, or 23px */
+  letter-spacing: 0.06em;
+  color: #292929;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid #cdcdcd;
+}
+
+.btn-pets.left {
+  color: #cdcdcd;
+}
+
+.btn-pets.center {
+  background: #f1cdb3;
+  border-color: #f1cdb3;
+}
+
+.btn-pets.right {
+  border-color: #f1cdb3;
+}
