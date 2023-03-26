@@ -40,6 +40,10 @@
   margin-left: 1px;
 }
 
+.menu__link.active{
+  cursor: default;
+}
+
 .menu__link:hover,
 .menu__link:active {
   color: #fafafa;
@@ -48,7 +52,7 @@
 .menu__item:first-child {
   border-bottom: 3px solid #f1cdb3;
   color: #fafafa;
-}
+  }
 
 .menu__link:active {
   border-bottom: 3px solid #f1cdb3;
