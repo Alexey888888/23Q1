@@ -489,11 +489,6 @@ img {
   border-radius: 9px 9px 0px 0px;
 }
 
-@media (max-width: 1250px) {
-  .slider-list__wrapper {
-    gap: 40px;
-  }
-}
 .card__description {
   background: #fafafa;
   text-align: center;
@@ -535,6 +530,21 @@ img {
   color: #4f4c4c;
 }
 
+@media (max-width: 1250px) {
+  .slider-list__wrapper {
+    gap: 40px;
+  }
+}
+@media (max-width: 1250px) {
+  .slider-list__wrapper {
+    gap: 40px;
+  }
+}
+@media (max-width: 1100px) {
+  .slider__card:last-child {
+    display: none;
+  }
+}
 .help__title {
   font-family: "Georgia";
   font-style: normal;
