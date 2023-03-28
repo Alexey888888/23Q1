@@ -561,21 +561,14 @@ img {
 }
 
 .help__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+}
+
+.help__list {
   margin-top: 60px;
-}
-
-.help__list-up {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1026px;
-}
-
-.help__list-down {
-  display: flex;
-  margin: 55px auto 0;
-  justify-content: space-around;
-  max-width: 978px;
 }
 
 .help__item {
