@@ -9,6 +9,16 @@
   margin-bottom: 100px;
 }
 
+@media (max-width: 1250px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__img {
+    order: 1;
+    margin: 0 auto;
+  }
+}
+
 .about__right {
   margin-right: 175px;
 }

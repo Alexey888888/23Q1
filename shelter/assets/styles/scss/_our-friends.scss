@@ -37,6 +37,12 @@
   border-radius: 9px 9px 0px 0px;
 }
 
+@media (max-width: 1250px) {
+  .slider-list__wrapper {
+    gap: 40px;
+  }
+}
+
 .card__description {
   background: #fafafa;
   text-align: center;
@@ -62,9 +68,6 @@
   margin-top: 60px;
   display: flex;
   justify-content: center;
-}
-
-.slider__card {
 }
 
 .slider__card:hover {

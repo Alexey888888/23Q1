@@ -41,14 +41,99 @@ a {
 }
 
 @font-face {
-  font-family: "Arial";
-  src: url("../../fonts/ArialMT.woff2") format("woff2");
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow.woff2") format("woff2"), url("../../fonts/ArialNarrow.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/ArialMT.woff2") format("woff2"), url("../../fonts/ArialMT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-Black.woff2") format("woff2"), url("../../fonts/Arial-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow-Italic.woff2") format("woff2"), url("../../fonts/ArialNarrow-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-BoldItalicMT.woff2") format("woff2"), url("../../fonts/Arial-BoldItalicMT.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow-BoldItalic.woff2") format("woff2"), url("../../fonts/ArialNarrow-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-BoldMT.woff2") format("woff2"), url("../../fonts/Arial-BoldMT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-ItalicMT.woff2") format("woff2"), url("../../fonts/Arial-ItalicMT.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow-Bold.woff2") format("woff2"), url("../../fonts/ArialNarrow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia-Bold.woff2") format("woff2"), url("../../fonts/Georgia-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia.woff2") format("woff2"), url("../../fonts/Georgia.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia-Italic.woff2") format("woff2"), url("../../fonts/Georgia-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia-BoldItalic.woff2") format("woff2"), url("../../fonts/Georgia-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
 img {
   vertical-align: top;
+  max-width: 100%;
 }
 
 .container {
@@ -57,6 +142,11 @@ img {
   padding: 0 40px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 .btn {
   padding: 15px 45px;
   border-radius: 100px;
@@ -257,6 +347,50 @@ img {
   margin-top: 42px;
 }
 
+@media (max-width: 1250px) {
+  .not__only__wrapper {
+    flex-direction: column;
+  }
+  .not-only__img {
+    margin-left: 450px;
+  }
+  .not-only__title {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .not-only__text {
+    width: 100%;
+  }
+}
+@media (max-width: 1150px) {
+  .not-only__img {
+    margin-left: 400px;
+  }
+}
+@media (max-width: 1000px) {
+  .not-only__img {
+    margin-left: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .not-only__img {
+    margin-left: 138px;
+  }
+  .not-only__title {
+    width: 310px;
+    margin-left: 124px;
+  }
+  .not-only__text {
+    width: 460px;
+    margin-left: 124px;
+  }
+  .not-only__btn {
+    margin-left: 250px;
+  }
+  .not-only__img {
+    margin-top: 98px;
+  }
+}
 .about__wrapper {
   display: flex;
   justify-content: space-between;
@@ -268,6 +402,15 @@ img {
   margin-bottom: 100px;
 }
 
+@media (max-width: 1250px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__img {
+    order: 1;
+    margin: 0 auto;
+  }
+}
 .about__right {
   margin-right: 175px;
 }
@@ -334,6 +477,11 @@ img {
   border-radius: 9px 9px 0px 0px;
 }
 
+@media (max-width: 1250px) {
+  .slider-list__wrapper {
+    gap: 40px;
+  }
+}
 .card__description {
   background: #fafafa;
   text-align: center;
