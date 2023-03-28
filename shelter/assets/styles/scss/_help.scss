@@ -72,3 +72,14 @@
   color: #545454;
   margin-top: 30px;
 }
+
+@media (max-width: 768px) {
+  .help__item {
+    width: 170px;
+  }
+
+  .help__list {
+    gap: 55px 60px;
+    margin-top: 59px;
+  }
+}
