@@ -46,16 +46,27 @@
   .about__img {
     order: 1;
     margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
   }
 
   .about__title {
+    width: 100%;
     margin-top: 80px;
+  }
+
+  .about__text {
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .about__right {
     margin-left: 139px;
+  }
+
+  .about__text {
+    width: 430px;
   }
 
   .about__img {

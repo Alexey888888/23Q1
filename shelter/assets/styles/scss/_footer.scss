@@ -18,10 +18,6 @@
   justify-content: space-between;
 }
 
-.footer__locations {
-  margin-left: -5px;
-}
-
 .footer__title {
   font-family: "Georgia";
   font-style: normal;
@@ -54,4 +50,47 @@
 
 .footer__icon {
   margin-right: 20px;
+}
+
+.footer__contact-text {
+  display: flex;
+  gap: 160px;
+}
+
+@media (max-width: 1180px) {
+  .footer__wrapper {
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: center;
+  }
+
+  .footer__title {
+    margin-top: 0;
+  }
+
+  .footer__contact-text {
+    display: flex;
+    gap: 150px;
+    margin-left: -6px;
+  }
+
+  .footer__contacts,
+  .footer__locations {
+    height: 234px;
+  }
+
+  .footer__locations {
+    margin-left: 0;
+  }
+
+  .footer__img {
+    margin: 0 auto;
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 850px) {
+  .footer__contact-text {
+    gap: 60px;
+  }
 }

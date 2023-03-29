@@ -77,3 +77,22 @@
   color: #b2b2b2;
   width: 380px;
 }
+
+@media (max-width: 1000px) {
+  .in-additional__wrapper {
+    flex-direction: column-reverse;
+    padding: 80px 0 100px 0;
+  }
+
+  .in-addition__img {
+    margin: 60px auto 0;
+  }
+
+  .in-addition__right {
+    margin: 0 auto;
+  }
+
+  .credit-card {
+    margin-top: 19px;
+  }
+}
