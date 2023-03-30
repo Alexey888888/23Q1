@@ -417,6 +417,7 @@ img {
 @media (max-width: 768px) {
   .not-only__img {
     margin-left: 138px;
+    margin-top: 98px;
   }
   .not-only__title {
     width: 310px;
@@ -429,8 +430,57 @@ img {
   .not-only__btn {
     margin-left: 250px;
   }
+}
+@media (max-width: 750px) {
+  .not__only__wrapper {
+    align-items: center;
+  }
   .not-only__img {
+    margin-left: 0x;
     margin-top: 98px;
+    max-width: 450px;
+  }
+  .not-only__title {
+    margin-left: 0px;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+  }
+  .not-only__text {
+    margin-left: 0px;
+    width: 300px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  .not-only__btn {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 620px) {
+  .not-only__img {
+    max-width: 350px;
+  }
+}
+@media (max-width: 520px) {
+  .not-only__title {
+    text-align: center;
+  }
+  .not-only__text {
+    text-align: center;
+  }
+  .not-only__img {
+    margin-left: 40px;
+    max-width: 260px;
+    margin-top: 104px;
+  }
+}
+@media (max-width: 320px) {
+  .not-only__title {
+    width: 200px;
+    margin-left: 52px;
+  }
+  .not-only__text {
+    margin-left: 5px;
   }
 }
 .about__wrapper {
