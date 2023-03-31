@@ -74,3 +74,46 @@
     margin-bottom: 100px;
   }
 }
+
+@media (max-width: 750px) {
+  .about__right {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  .about__title {
+    font-size: 25px;
+    margin-top: 42px;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+
+  .about__img {
+    margin-top: 42px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about__right {
+    margin-left: 5px;
+  }
+
+  .about__title {
+    text-align: center;
+    margin-left: 8px;
+  }
+
+  .about__text {
+    width: 270px;
+    text-align: justify;
+    margin-top: 24px;
+  }
+
+  .about__img {
+    max-width: 260px;
+  }
+}
