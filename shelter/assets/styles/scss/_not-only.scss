@@ -39,6 +39,7 @@
   .not__only__wrapper {
     flex-direction: column;
   }
+
   .not-only__img {
     margin-left: 450px;
   }
@@ -91,6 +92,10 @@
     align-items: center;
   }
 
+  .not-only__title {
+    width: 100%;
+  }
+
   .not-only__img {
     margin-left: 0x;
     margin-top: 98px;
@@ -105,7 +110,7 @@
 
   .not-only__text {
     margin-left: 0px;
-    width: 300px;
+    width: 100%;
     margin-left: 10px;
   }
 
@@ -144,6 +149,7 @@
   }
 
   .not-only__text {
+    width: 300px;
     margin-left: 5px;
   }
 }

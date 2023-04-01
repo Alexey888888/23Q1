@@ -125,3 +125,9 @@
     margin-left: -154px;
   }
 }
+
+@media (max-width: 319px) {
+  .help__item:last-child {
+    margin-left: 0px;
+  }
+}

@@ -435,6 +435,9 @@ img {
   .not__only__wrapper {
     align-items: center;
   }
+  .not-only__title {
+    width: 100%;
+  }
   .not-only__img {
     margin-left: 0x;
     margin-top: 98px;
@@ -447,7 +450,7 @@ img {
   }
   .not-only__text {
     margin-left: 0px;
-    width: 300px;
+    width: 100%;
     margin-left: 10px;
   }
   .not-only__btn {
@@ -479,6 +482,7 @@ img {
     margin-left: 52px;
   }
   .not-only__text {
+    width: 300px;
     margin-left: 5px;
   }
 }
@@ -833,6 +837,11 @@ img {
     margin-left: -154px;
   }
 }
+@media (max-width: 319px) {
+  .help__item:last-child {
+    margin-left: 0px;
+  }
+}
 .in-addition {
   background: #f6f6f6;
 }
@@ -844,7 +853,7 @@ img {
 }
 
 .in-addition__img {
-  height: 261px;
+  max-height: 261px;
   margin-right: 28px;
   margin-top: -2px;
 }
@@ -914,18 +923,83 @@ img {
 }
 
 @media (max-width: 1000px) {
+  .in-addition__img-wrapper {
+    max-width: 100%;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 780px) {
   .in-additional__wrapper {
     flex-direction: column-reverse;
     padding: 80px 0 100px 0;
   }
   .in-addition__img {
     margin: 60px auto 0;
+    height: auto;
+  }
+  .in-addition__img-wrapper {
+    margin-left: 100px;
   }
   .in-addition__right {
     margin: 0 auto;
   }
   .credit-card {
     margin-top: 19px;
+  }
+}
+@media (max-width: 450px) {
+  .in-addition__title {
+    font-size: 25px;
+    text-align: center;
+  }
+  .in-additional__wrapper {
+    padding: 42px 0 42.5px 0;
+  }
+}
+@media (max-width: 415px) {
+  .credit-card {
+    width: 281px;
+    font-size: 15px;
+  }
+  .in-addition__right {
+    max-width: 100%;
+  }
+  .in-addition__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .in-addition__right {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+  }
+  .in-addition__title {
+    width: 210px;
+    height: 57px;
+    margin-left: 35px;
+  }
+  .in-addition__subtitle {
+    letter-spacing: 0.01px;
+    margin-left: 3px;
+    margin-top: 31px;
+  }
+  .credit-card {
+    margin-top: 24px;
+  }
+  .credit-card span {
+    margin-top: 2px;
+  }
+  .in-addition__text {
+    text-align: justify;
+  }
+  .in-addition__img {
+    margin-top: 42px;
+    margin-left: 10px;
+    max-width: 260px;
+  }
+  .in-addition__img-wrapper {
+    margin-left: 0px;
   }
 }
 .footer {
