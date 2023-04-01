@@ -319,7 +319,7 @@ img {
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 767.9px) {
   .burger {
     display: block;
     position: relative;
@@ -449,9 +449,9 @@ img {
     letter-spacing: 0.06em;
   }
   .not-only__text {
-    margin-left: 0px;
     width: 100%;
     margin-left: 10px;
+    padding-right: 40px;
   }
   .not-only__btn {
     margin-left: 0px;
@@ -483,7 +483,8 @@ img {
   }
   .not-only__text {
     width: 300px;
-    margin-left: 5px;
+    margin-left: 0px;
+    padding-right: 0px;
   }
 }
 .about__wrapper {
@@ -947,6 +948,11 @@ img {
     margin-top: 19px;
   }
 }
+@media (max-width: 760px) {
+  .in-addition__img-wrapper {
+    margin: 0 auto;
+  }
+}
 @media (max-width: 450px) {
   .in-addition__title {
     font-size: 25px;
@@ -954,6 +960,7 @@ img {
   }
   .in-additional__wrapper {
     padding: 42px 0 42.5px 0;
+    margin-left: 0px;
   }
 }
 @media (max-width: 415px) {
@@ -1020,6 +1027,10 @@ img {
   justify-content: space-between;
 }
 
+.footer__contacts {
+  width: 279px;
+}
+
 .footer__title {
   font-family: "Georgia";
   font-style: normal;
@@ -1030,6 +1041,10 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
   margin-top: 15px;
+}
+
+.footer__locations .footer__title {
+  width: 270px;
 }
 
 .footer__link {
@@ -1056,26 +1071,32 @@ img {
 
 .footer__contact-text {
   display: flex;
-  gap: 160px;
+  justify-content: space-between;
+  width: 733px;
 }
 
+@media (max-width: 1279px) {
+  .footer__contact-text {
+    width: 61%;
+  }
+}
 @media (max-width: 1180px) {
   .footer__wrapper {
     flex-direction: column;
     padding-top: 30px;
     align-items: center;
+    justify-content: center;
+  }
+  .footer__contact-text {
+    width: 100%;
   }
   .footer__title {
     margin-top: 0;
   }
-  .footer__contact-text {
-    display: flex;
-    gap: 150px;
-    margin-left: -6px;
-  }
   .footer__contacts,
   .footer__locations {
     height: 234px;
+    min-width: 302px;
   }
   .footer__locations {
     margin-left: 0;
@@ -1085,9 +1106,57 @@ img {
     padding-top: 65px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+  .footer__contacts {
+    margin-left: 33px;
+  }
+  .footer__locations {
+    margin-right: 33px;
+  }
+}
+@media (max-width: 680px) {
   .footer__contact-text {
-    gap: 60px;
+    flex-direction: column;
+  }
+  .footer__locations {
+    margin-top: 40px;
+    margin-left: 33px;
+  }
+}
+@media (max-width: 450px) {
+  .footer__title {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .footer__locations {
+    margin-left: 0px;
+  }
+  .footer__contacts {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 335px) {
+  .footer__contacts {
+    height: 208px;
+    align-items: center;
+    margin-left: -12px;
+  }
+  .footer__title {
+    width: 231px;
+  }
+  .footer__locations {
+    height: 220px;
+    margin-left: -10px;
+  }
+  .footer__locations .footer__title {
+    margin-left: 15px;
+  }
+  .footer__img {
+    padding-top: 0;
+    margin-top: 42px;
+    max-width: 260px;
   }
 }
 .logo__title.pets,

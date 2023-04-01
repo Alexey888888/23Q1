@@ -109,6 +109,12 @@
   }
 }
 
+@media (max-width: 760px) {
+  .in-addition__img-wrapper {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 450px) {
   .in-addition__title {
     font-size: 25px;
@@ -117,6 +123,7 @@
 
   .in-additional__wrapper {
     padding: 42px 0 42.5px 0;
+    margin-left: 0px;
   }
 }
 

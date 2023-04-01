@@ -15,7 +15,12 @@
   display: flex;
   flex-direction: column;
   height: 250px;
+
   justify-content: space-between;
+}
+
+.footer__contacts {
+  width: 279px;
 }
 
 .footer__title {
@@ -28,6 +33,10 @@
   letter-spacing: 0.06em;
   color: #ffffff;
   margin-top: 15px;
+}
+
+.footer__locations .footer__title {
+  width: 270px;
 }
 
 .footer__link {
@@ -54,7 +63,14 @@
 
 .footer__contact-text {
   display: flex;
-  gap: 160px;
+  justify-content: space-between;
+  width: 733px;
+}
+
+@media (max-width: 1279px) {
+  .footer__contact-text {
+    width: 61%;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -62,21 +78,21 @@
     flex-direction: column;
     padding-top: 30px;
     align-items: center;
+    justify-content: center;
+  }
+
+  .footer__contact-text {
+    width: 100%;
   }
 
   .footer__title {
     margin-top: 0;
   }
 
-  .footer__contact-text {
-    display: flex;
-    gap: 150px;
-    margin-left: -6px;
-  }
-
   .footer__contacts,
   .footer__locations {
     height: 234px;
+    min-width: 302px;
   }
 
   .footer__locations {
@@ -89,8 +105,71 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+  .footer__contacts {
+    margin-left: 33px;
+  }
+
+  .footer__locations {
+    margin-right: 33px;
+  }
+}
+
+@media (max-width: 680px) {
   .footer__contact-text {
-    gap: 60px;
+    flex-direction: column;
+  }
+
+  .footer__locations {
+    margin-top: 40px;
+    margin-left: 33px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__title {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__locations {
+    margin-left: 0px;
+  }
+
+  .footer__contacts {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 335px) {
+  .footer {
+    &__contacts {
+      height: 208px;
+      align-items: center;
+      margin-left: -12px;
+    }
+
+    &__title {
+      width: 231px;
+    }
+  }
+
+  .footer {
+    &__locations {
+      height: 220px;
+      margin-left: -10px;
+    }
+  }
+
+  .footer__locations .footer__title {
+    margin-left: 15px;
+  }
+
+  .footer__img {
+    padding-top: 0;
+    margin-top: 42px;
+    max-width: 260px;
   }
 }
