@@ -447,6 +447,7 @@ img {
     margin-left: 0px;
     font-size: 25px;
     letter-spacing: 0.06em;
+    width: 100%;
   }
   .not-only__text {
     width: 100%;
@@ -1263,5 +1264,32 @@ img {
     margin-top: 39px;
     margin-bottom: 0;
     padding-bottom: 76px;
+  }
+}
+@media (max-width: 690px) {
+  .pets__title {
+    font-size: 25px;
+  }
+  .pets__cards-container {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .pets__title {
+    padding-top: 42px;
+  }
+  .pets__cards-container {
+    margin-top: 42px;
+  }
+  .pets__buttons {
+    margin-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+@media (max-width: 320px) {
+  .pets__title {
+    width: 300px;
+  }
+  .pets-our-friends .container {
+    padding: 0 10px;
   }
 }
