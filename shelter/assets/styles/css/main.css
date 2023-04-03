@@ -435,16 +435,13 @@ img {
   .not__only__wrapper {
     align-items: center;
   }
-  .not-only__title {
-    width: 100%;
-  }
   .not-only__img {
     margin-left: 0x;
     margin-top: 98px;
     max-width: 450px;
   }
   .not-only__title {
-    margin-left: 0px;
+    margin-left: 10px;
     font-size: 25px;
     letter-spacing: 0.06em;
     width: 100%;
@@ -661,6 +658,7 @@ img {
 
 .slider__card:hover {
   cursor: pointer;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .slider__card:hover > .card__description {
@@ -988,7 +986,7 @@ img {
     margin-left: 35px;
   }
   .in-addition__subtitle {
-    letter-spacing: 0.01px;
+    letter-spacing: 0;
     margin-left: 3px;
     margin-top: 31px;
   }
@@ -1225,6 +1223,7 @@ img {
 /*---------------------------------*/
 .pagination__card:hover {
   cursor: pointer;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .pagination__card:hover > .card__description {
@@ -1240,9 +1239,8 @@ img {
 /*---------------------------------*/
 @media (max-width: 1200px) {
   .pets__cards-container {
-    min-height: 1365px;
-    padding: 0;
-    margin-top: 30px;
+    min-height: 1405px;
+    margin-top: 15px;
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
@@ -1261,7 +1259,7 @@ img {
     margin-left: 65px;
   }
   .pets__buttons {
-    margin-top: 39px;
+    margin-top: 14px;
     margin-bottom: 0;
     padding-bottom: 76px;
   }
@@ -1278,10 +1276,10 @@ img {
     padding-top: 42px;
   }
   .pets__cards-container {
-    margin-top: 42px;
+    margin-top: 27px;
   }
   .pets__buttons {
-    margin-top: 42px;
+    margin-top: 16px;
     padding-bottom: 42px;
   }
 }
