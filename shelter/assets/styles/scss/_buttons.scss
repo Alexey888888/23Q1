@@ -21,7 +21,7 @@
   color: #4f4c4c;
 }
 
-.btn-arrow {
+.btn-arrow-left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,13 +31,21 @@
   transition: all 0.4s;
 }
 
-.btn-arrow:hover {
-  border-color: #fddcc4;
-  background: #fddcc4;
+.btn-arrow-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px 17px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  transition: all 0.4s;
+  transform: rotate(-180deg);
 }
 
-.btn-arrow.right {
-  transform: rotate(-180deg);
+.btn-arrow-left:hover,
+.btn-arrow-right:hover {
+  border-color: #fddcc4;
+  background: #fddcc4;
 }
 
 .btn_bordered {
