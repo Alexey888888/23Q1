@@ -123,6 +123,7 @@ const moveNext = () => {
 const movePrevious = () => {
   slider.classList.add("transition-previous");
   cardPrevious();
+  getPreviousArr();
 };
 
 btnRight.addEventListener("click", moveNext);
@@ -246,12 +247,13 @@ function getNextArr() {
   }
   console.log(arrayCount);
   console.log(currentArr);
-  //arrayCount.filter((item) => currentArr.includes(item));
+
   let arrWithoutCurrent = arrayCount.reduce((acc, item) => {
     if (!currentArr.includes(item)) acc.push(item);
     return acc;
   }, []);
   console.log(arrWithoutCurrent);
+
   for (let i = 0; i < 3; i++) {
     nextArr.push(
       arrWithoutCurrent.splice(
@@ -261,6 +263,31 @@ function getNextArr() {
     );
   }
   console.log(nextArr);
+}
+
+function getPreviousArr() {
+  currentArr.length = 0;
+  currentArr = [...previousArr];
+  previousArr.length = 0;
+  arrayCount.length = 0;
+  for (let i = 0; i < allPetsArr.length; i++) {
+    arrayCount.push(i);
+  }
+
+  let arrWithoutCurrent = arrayCount.reduce((acc, item) => {
+    if (!currentArr.includes(item)) acc.push(item);
+    return acc;
+  }, []);
+  console.log(arrWithoutCurrent);
+
+  for (let i = 0; i < 3; i++) {
+    previousArr.push(
+      arrWithoutCurrent.splice(
+        Math.floor(Math.random() * arrWithoutCurrent.length),
+        1
+      )[0]
+    );
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initSlider);
