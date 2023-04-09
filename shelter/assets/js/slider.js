@@ -118,16 +118,19 @@ const moveNext = () => {
   slider.classList.add("transition-next");
   cardNext();
   getNextArr();
+  btnRight.removeEventListener("click", moveNext);
+  btnLeft.removeEventListener("click", movePrevious);
 };
 
 const movePrevious = () => {
   slider.classList.add("transition-previous");
   cardPrevious();
   getPreviousArr();
+  btnRight.removeEventListener("click", moveNext);
+  btnLeft.removeEventListener("click", movePrevious);
 };
 
 btnRight.addEventListener("click", moveNext);
-
 btnLeft.addEventListener("click", movePrevious);
 
 slider.addEventListener("animationend", (animationEvent) => {
@@ -138,6 +141,8 @@ slider.addEventListener("animationend", (animationEvent) => {
     slider.classList.remove("transition-next");
     itemCurrent.innerHTML = itemNext.innerHTML;
   }
+  btnRight.addEventListener("click", moveNext);
+  btnLeft.addEventListener("click", movePrevious);
 });
 
 function cardNext() {
