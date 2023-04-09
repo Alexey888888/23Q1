@@ -228,27 +228,36 @@ function initUniqueArr() {
 
 initUniqueArr();
 
-const previousArr = uniqueArr.splice(0, 3);
-const currentArr = uniqueArr.splice(0, 3);
-const nextArr = [...uniqueArr];
+let previousArr = uniqueArr.splice(0, 3);
+let currentArr = uniqueArr.splice(0, 3);
+let nextArr = [...uniqueArr];
 
 console.log(previousArr);
 console.log(currentArr);
 console.log(nextArr);
 
 function getNextArr() {
+  currentArr.length = 0;
+  currentArr = [...nextArr];
   nextArr.length = 0;
   arrayCount.length = 0;
   for (let i = 0; i < allPetsArr.length; i++) {
     arrayCount.push(i);
   }
-  // console.log(arrayCount);
-  // console.log(currentArr);
-  // arrayCount.filter((item) => currentArr.includes(item));
-  // console.log(arrayCount);
+  console.log(arrayCount);
+  console.log(currentArr);
+  //arrayCount.filter((item) => currentArr.includes(item));
+  let arrWithoutCurrent = arrayCount.reduce((acc, item) => {
+    if (!currentArr.includes(item)) acc.push(item);
+    return acc;
+  }, []);
+  console.log(arrWithoutCurrent);
   for (let i = 0; i < 3; i++) {
     nextArr.push(
-      arrayCount.splice(Math.floor(Math.random() * arrayCount.length), 1)[0]
+      arrWithoutCurrent.splice(
+        Math.floor(Math.random() * arrWithoutCurrent.length),
+        1
+      )[0]
     );
   }
   console.log(nextArr);
