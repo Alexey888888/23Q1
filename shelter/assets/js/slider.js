@@ -144,7 +144,6 @@ function getRandomNumber() {
 function cardNext() {
   let random = getRandomNumber();
   const cardsLine = document.querySelectorAll(".slider__card");
-  console.log(cardsLine);
 
   cardsLine[6].innerHTML = "";
   const src6 = allPetsArr[random - 1].img;
@@ -209,3 +208,56 @@ const nextArr = [...uniqueArr];
 console.log(previousArr);
 console.log(currentArr);
 console.log(nextArr);
+{
+  /* <div class="slider-wrapper">
+  <div class="slider">
+    <div class="slider__item item_previous"></div>
+    <div class="slider__item item_current"></div>
+    <div class="slider__item item_next"></div>
+  </div>
+</div>; */
+}
+
+const createCardTemplate = () => {
+  const card = document.createElement("div");
+  card.classList.add(".slider__card");
+  return card;
+};
+
+document.addEventListener("DOMContentLoaded", showSlider);
+
+function showSlider() {
+  let itemCurrent = document.querySelector(".item_current");
+  itemCurrent.innerHTML = "";
+  for (let i = 0; i < 3; i++) {
+    let card = document.createElement("div");
+    card.className = "slider__card";
+
+    let image = document.createElement("img");
+    image.className = "slider__img";
+    image.alt = "our_friends";
+    image.src = allPetsArr[currentArr[i]].img;
+
+    let description = document.createElement("div");
+    description.className = "card__description";
+
+    let name = document.createElement("p");
+    name.className = "card__pets-name";
+    name.innerText = allPetsArr[currentArr[i]].name;
+
+    let btnWrap = document.createElement("div");
+    btnWrap.className = "card__btn";
+
+    let btn = document.createElement("button");
+    btn.classList.add("btn", "btn_bordered");
+    btn.innerText = "Learn more";
+
+    btnWrap.prepend(btn);
+    description.prepend(name);
+    description.append(btnWrap);
+    card.prepend(image);
+    card.append(description);
+
+    itemCurrent.append(card);
+  }
+}
