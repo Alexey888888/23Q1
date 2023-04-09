@@ -32,14 +32,14 @@
 }
 // ----------------------
 .slider-wrapper {
-  width: 993px;
+  width: 990px;
   overflow: hidden;
 }
 
 .slider {
   display: flex;
   position: relative;
-  left: -987px;
+  left: -990px;
 }
 
 .slider__card {
@@ -183,7 +183,7 @@
 
 @keyframes move-previous {
   from {
-    left: -993px;
+    left: -990px;
   }
   to {
     left: 0px;
@@ -197,10 +197,10 @@
 
 @keyframes move-next {
   from {
-    left: -993px;
+    left: -990px;
   }
   to {
-    left: -1986px;
+    left: -1980px;
   }
 }
 
