@@ -131,6 +131,90 @@ a {
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/ArialMT.woff2") format("woff2"), url("../../fonts/ArialMT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-Black.woff2") format("woff2"), url("../../fonts/Arial-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow-Italic.woff2") format("woff2"), url("../../fonts/ArialNarrow-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-BoldItalicMT.woff2") format("woff2"), url("../../fonts/Arial-BoldItalicMT.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow-BoldItalic.woff2") format("woff2"), url("../../fonts/ArialNarrow-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-BoldMT.woff2") format("woff2"), url("../../fonts/Arial-BoldMT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../fonts/Arial-ItalicMT.woff2") format("woff2"), url("../../fonts/Arial-ItalicMT.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../../fonts/ArialNarrow-Bold.woff2") format("woff2"), url("../../fonts/ArialNarrow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia-Bold.woff2") format("woff2"), url("../../fonts/Georgia-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia.woff2") format("woff2"), url("../../fonts/Georgia.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia-Italic.woff2") format("woff2"), url("../../fonts/Georgia-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia-BoldItalic.woff2") format("woff2"), url("../../fonts/Georgia-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
 img {
   vertical-align: top;
   max-width: 100%;
@@ -152,6 +236,25 @@ img {
     padding: 0 20px;
   }
 }
+.scroll-lock {
+  overflow: hidden;
+}
+
+.blackout {
+  background: rgba(41, 41, 41, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.blackout_active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
 .btn {
   padding: 15px 45px;
   border-radius: 100px;
@@ -175,7 +278,7 @@ img {
   color: #4f4c4c;
 }
 
-.btn-arrow {
+.btn-arrow-left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,13 +288,21 @@ img {
   transition: all 0.4s;
 }
 
-.btn-arrow:hover {
-  border-color: #fddcc4;
-  background: #fddcc4;
+.btn-arrow-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px 17px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  transition: all 0.4s;
+  transform: rotate(-180deg);
 }
 
-.btn-arrow.right {
-  transform: rotate(-180deg);
+.btn-arrow-left:hover,
+.btn-arrow-right:hover {
+  border-color: #fddcc4;
+  background: #fddcc4;
 }
 
 .btn_bordered {
@@ -227,11 +338,18 @@ img {
 }
 
 .btn-pets.right {
+  color: #cdcdcd;
+  cursor: default;
+}
+
+.btn-pets_active {
+  cursor: pointer;
   border-color: #f1cdb3;
+  color: #292929 !important;
   transition: all 0.5s;
 }
 
-.btn-pets.right:hover {
+.btn-pets_active:hover {
   background: #fddcc4;
   border-color: #fddcc4;
 }
@@ -269,6 +387,7 @@ img {
   line-height: 160%;
   /* identical to box height, or 24px */
   color: #cdcdcd;
+  margin-top: 46px;
 }
 
 .menu__link {
@@ -311,10 +430,6 @@ img {
   margin-left: 4px;
 }
 
-.menu {
-  margin-top: 46px;
-}
-
 .burger {
   display: none;
 }
@@ -327,6 +442,8 @@ img {
     height: 22px;
     cursor: pointer;
     margin-top: 49px;
+    transition: all 0.9s;
+    z-index: 100;
   }
   .burger span,
   .burger span:before,
@@ -337,7 +454,7 @@ img {
     width: 100%;
     height: 2px;
     background: #f1cdb3;
-    transition: all 0.9s;
+    transition: all 0.6s;
   }
   .burger span {
     top: 10px;
@@ -348,8 +465,35 @@ img {
   .burger span:after {
     top: 10px;
   }
+  .burger_active {
+    transform: rotate(90deg);
+  }
   .menu {
-    display: none;
+    position: fixed;
+    top: -46px;
+    width: 320px;
+    height: 100%;
+    background: #292929;
+    right: -768px;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+  }
+  .menu_active {
+    right: 0;
+  }
+  .menu__list {
+    height: 327px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    flex-direction: column;
+    align-items: center;
+    gap: normal;
+    justify-content: space-around;
   }
 }
 .not__only__wrapper {
@@ -620,9 +764,24 @@ img {
   align-items: center;
 }
 
-.slider-list__wrapper {
+.slider__item {
   display: flex;
   gap: 90px;
+}
+
+.slider-wrapper {
+  width: 990px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  left: -990px;
+}
+
+.slider__card {
+  width: 270px;
 }
 
 .slider__img {
@@ -672,7 +831,7 @@ img {
 }
 
 @media (max-width: 1250px) {
-  .slider-list__wrapper {
+  .slider__item {
     gap: 40px;
   }
 }
@@ -693,7 +852,7 @@ img {
     -moz-column-gap: 80px;
          column-gap: 80px;
   }
-  .btn-arrow {
+  .btn-arrow-left {
     margin-top: 20px;
   }
 }
@@ -745,6 +904,32 @@ img {
     margin-top: 42px;
   }
 }
+@keyframes move-previous {
+  from {
+    left: -990px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition-previous {
+  animation-name: move-previous;
+  animation-duration: 5s;
+}
+
+@keyframes move-next {
+  from {
+    left: -990px;
+  }
+  to {
+    left: -1980px;
+  }
+}
+.transition-next {
+  animation-name: move-next;
+  animation-duration: 5s;
+}
+
 .help__title {
   font-family: "Georgia";
   font-style: normal;
@@ -1182,8 +1367,21 @@ img {
 
 .menu__link.pets.active {
   cursor: default;
+  color: #292929;
 }
 
+@media (max-width: 767.9px) {
+  .menu__link.pets {
+    color: #cdcdcd;
+  }
+  .menu__link.pets:hover,
+  .menu__link.pets:hover {
+    color: #fafafa;
+  }
+  .menu__link.pets.active {
+    color: #fafafa;
+  }
+}
 .pets-our-friends {
   background: #f6f6f6;
 }
@@ -1289,5 +1487,15 @@ img {
   }
   .pets-our-friends .container {
     padding: 0 10px;
+  }
+}
+@media (min-width: 768.1px) {
+  .pets__title {
+    font-family: "Georgia";
+  }
+}
+@media (min-width: 620px) {
+  .pets__title {
+    font-family: "Georgia";
   }
 }

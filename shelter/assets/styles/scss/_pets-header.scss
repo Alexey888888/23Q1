@@ -20,6 +20,21 @@
   margin-bottom: 30px;
 }
 
-.menu__link.pets.active{
+.menu__link.pets.active {
   cursor: default;
+  color: #292929;
+}
+
+@media (max-width: 767.9px) {
+  .menu__link.pets {
+    color: #cdcdcd;
+  }
+  .menu__link.pets:hover,
+  .menu__link.pets:hover {
+    color: #fafafa;
+  }
+
+  .menu__link.pets.active {
+    color: #fafafa;
+  }
 }
