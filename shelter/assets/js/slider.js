@@ -222,14 +222,14 @@ function initUniqueArr() {
   for (let i = 0; i < allPetsArr.length; i++) {
     arrayCount.push(i);
   }
-  console.log(arrayCount);
+  //console.log(arrayCount);
   for (let i = 0; i < allPetsArr.length; i++) {
     uniqueArr.push(
       arrayCount.splice(Math.floor(Math.random() * arrayCount.length), 1)[0]
     );
   }
   uniqueArr.push(uniqueArr[0]);
-  console.log(uniqueArr);
+  //console.log(uniqueArr);
 }
 
 initUniqueArr();
@@ -238,9 +238,9 @@ let previousArr = uniqueArr.splice(0, 3);
 let currentArr = uniqueArr.splice(0, 3);
 let nextArr = [...uniqueArr];
 
-console.log(previousArr);
-console.log(currentArr);
-console.log(nextArr);
+//console.log(previousArr);
+//console.log(currentArr);
+//console.log(nextArr);
 
 function getNextArr() {
   currentArr.length = 0;
@@ -250,14 +250,14 @@ function getNextArr() {
   for (let i = 0; i < allPetsArr.length; i++) {
     arrayCount.push(i);
   }
-  console.log(arrayCount);
-  console.log(currentArr);
+  //console.log(arrayCount);
+  // console.log(currentArr);
 
   let arrWithoutCurrent = arrayCount.reduce((acc, item) => {
     if (!currentArr.includes(item)) acc.push(item);
     return acc;
   }, []);
-  console.log(arrWithoutCurrent);
+  //console.log(arrWithoutCurrent);
 
   for (let i = 0; i < 3; i++) {
     nextArr.push(
@@ -267,7 +267,7 @@ function getNextArr() {
       )[0]
     );
   }
-  console.log(nextArr);
+  // console.log(nextArr);
 }
 
 function getPreviousArr() {
@@ -283,7 +283,7 @@ function getPreviousArr() {
     if (!currentArr.includes(item)) acc.push(item);
     return acc;
   }, []);
-  console.log(arrWithoutCurrent);
+  //console.log(arrWithoutCurrent);
 
   for (let i = 0; i < 3; i++) {
     previousArr.push(

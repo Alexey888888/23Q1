@@ -830,11 +830,6 @@ img {
   color: #4f4c4c;
 }
 
-@media (min-width: 768.1px) {
-  .slider__img {
-    border-radius: 9px 9px 0px 0px;
-  }
-}
 @media (max-width: 1250px) {
   .slider__item {
     gap: 40px;

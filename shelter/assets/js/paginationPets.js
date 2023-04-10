@@ -130,13 +130,13 @@ function initUniqueArr() {
 }
 
 initUniqueArr();
-console.log(uniqueArr);
+//console.log(uniqueArr);
 let arr1 = uniqueArr.splice(0, 3);
 let arr2 = uniqueArr.splice(0, 3);
 let arr3 = [...uniqueArr];
-console.log(arr1);
-console.log(arr2);
-console.log(arr3);
+//console.log(arr1);
+//console.log(arr2);
+//console.log(arr3);
 
 for (let i = 0; i < 6; i++) {
   mixArr(arr1);
@@ -145,7 +145,7 @@ for (let i = 0; i < 6; i++) {
   arr48.push(...arr1, ...arr2, ...arr3);
 }
 
-console.log(arr48);
+//console.log(arr48);
 
 function mixArr(array) {
   let x = array.length;
