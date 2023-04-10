@@ -211,9 +211,12 @@ function nextPage() {
   renderPage(startInd);
   if (currentPage === 6) {
     removeEventListenerUp();
+    pageUp.classList.remove("btn-pets_active");
+    pageLast.classList.remove("btn-pets_active");
   }
-
   btnPageDown.addEventListener("click", prevPage);
+  btnPageFirst.classList.add("btn-pets_active");
+  btnPageDown.classList.add("btn-pets_active");
 }
 
 function removeEventListenerUp() {
@@ -229,7 +232,11 @@ function prevPage() {
   renderPage(startInd);
   if (currentPage === 1) {
     removeEventListenerDown();
+    btnPageFirst.classList.remove("btn-pets_active");
+    btnPageDown.classList.remove("btn-pets_active");
   }
+  pageUp.classList.add("btn-pets_active");
+  pageLast.classList.add("btn-pets_active");
 }
 
 function removeEventListenerDown() {
@@ -246,6 +253,10 @@ function showLastPage() {
   renderPage(startInd);
   currentPage = 6;
   pageNum.innerHTML = currentPage;
+  btnPageFirst.classList.add("btn-pets_active");
+  btnPageDown.classList.add("btn-pets_active");
+  pageUp.classList.remove("btn-pets_active");
+  pageLast.classList.remove("btn-pets_active");
 }
 
 btnPageFirst.addEventListener("click", showFirstPage);
@@ -259,4 +270,8 @@ function showFirstPage() {
   renderPage(startInd);
   currentPage = 1;
   pageNum.innerHTML = currentPage;
+  btnPageFirst.classList.remove("btn-pets_active");
+  btnPageDown.classList.remove("btn-pets_active");
+  pageUp.classList.add("btn-pets_active");
+  pageLast.classList.add("btn-pets_active");
 }

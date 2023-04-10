@@ -342,16 +342,16 @@ img {
   cursor: default;
 }
 
-.btn-pets.right:hover {
-  background: #fddcc4;
-  border-color: #fddcc4;
-}
-
 .btn-pets_active {
   cursor: pointer;
   border-color: #f1cdb3;
   color: #292929 !important;
   transition: all 0.5s;
+}
+
+.btn-pets_active:hover {
+  background: #fddcc4;
+  border-color: #fddcc4;
 }
 
 .start-screen {
