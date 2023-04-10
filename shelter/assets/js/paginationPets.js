@@ -163,8 +163,19 @@ function mixArr(array) {
 let petsContainer = document.querySelector(".pets__cards-container");
 petsContainer.innerHTML = "";
 
+//---------------------------------------
+//---------------------------------------
+//---------------------------------------
+let petsNum = 8;
+let maxNum = 6;
+let start_ind = 40;
+//---------------------------------------
+//---------------------------------------
+//---------------------------------------
+
 function renderPage(startInd) {
-  for (let i = startInd; i < startInd + 8; i++) {
+  for (let i = startInd; i < startInd + petsNum; i++) {
+    //petsNum
     let card = document.createElement("div");
     card.className = "pagination__card";
 
@@ -207,9 +218,10 @@ function nextPage() {
   currentPage++;
   pageNum.innerHTML = currentPage;
   petsContainer.innerHTML = "";
-  startInd += 8;
+  startInd += petsNum; //petsNum
   renderPage(startInd);
-  if (currentPage === 6) {
+  if (currentPage === maxNum) {
+    //maxNum
     removeEventListenerUp();
     pageUp.classList.remove("btn-pets_active");
     pageLast.classList.remove("btn-pets_active");
@@ -228,7 +240,7 @@ function prevPage() {
   currentPage--;
   pageNum.innerHTML = currentPage;
   petsContainer.innerHTML = "";
-  startInd -= 8;
+  startInd -= petsNum; //petsNum
   renderPage(startInd);
   if (currentPage === 1) {
     removeEventListenerDown();
@@ -248,10 +260,10 @@ btnPageLast.addEventListener("click", showLastPage);
 function showLastPage() {
   btnPageDown.addEventListener("click", prevPage);
   removeEventListenerUp();
-  startInd = 40;
+  startInd = start_ind;
   petsContainer.innerHTML = "";
   renderPage(startInd);
-  currentPage = 6;
+  currentPage = maxNum; //maxNum
   pageNum.innerHTML = currentPage;
   btnPageFirst.classList.add("btn-pets_active");
   btnPageDown.classList.add("btn-pets_active");
@@ -275,3 +287,73 @@ function showFirstPage() {
   pageUp.classList.add("btn-pets_active");
   pageLast.classList.add("btn-pets_active");
 }
+
+//---------------------------------------
+//---------------------------------------
+//---------------------------------------
+//---------------------------------------
+//---------------------------------------
+const mediaQueryTablet = window.matchMedia(
+  "(max-width: 768px) and (min-width: 620px)"
+);
+
+function doIfTablet(isTabletSize) {
+  if (isTabletSize) {
+    petsContainer.innerHTML = "";
+    petsNum = 6;
+    maxNum = 8;
+    start_ind = 42;
+    renderPage(startInd);
+  }
+}
+
+doIfTablet(mediaQueryTablet.matches);
+
+mediaQueryTablet.addEventListener("change", function (event) {
+  doIfTablet(event.matches);
+});
+
+//---------------------------------------
+
+const mediaQueryDesktop = window.matchMedia("(min-width: 768.1px)");
+
+function doIfDesktop(isDesktopSize) {
+  if (isDesktopSize) {
+    petsContainer.innerHTML = "";
+    petsNum = 8;
+    maxNum = 6;
+    start_ind = 40;
+    renderPage(startInd);
+  }
+}
+
+doIfDesktop(mediaQueryDesktop.matches);
+
+mediaQueryDesktop.addEventListener("change", function (event) {
+  doIfDesktop(event.matches);
+});
+
+doIfTablet(mediaQueryTablet.matches);
+
+mediaQueryTablet.addEventListener("change", function (event) {
+  doIfTablet(event.matches);
+});
+
+//---------------------------------------
+const mediaQueryMobile = window.matchMedia("(max-width: 320px)");
+
+function doIfMobile(isMobileSize) {
+  if (isMobileSize) {
+    petsContainer.innerHTML = "";
+    petsNum = 3;
+    maxNum = 16;
+    start_ind = 45;
+    renderPage(startInd);
+  }
+}
+
+doIfMobile(mediaQueryMobile.matches);
+
+mediaQueryMobile.addEventListener("change", function (event) {
+  doIfMobile(event.matches);
+});
