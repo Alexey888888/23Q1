@@ -212,13 +212,13 @@ function nextPage() {
   if (currentPage === 6) {
     removeEventListenerUp();
   }
+
+  btnPageDown.addEventListener("click", prevPage);
 }
 
 function removeEventListenerUp() {
   btnPageUp.removeEventListener("click", nextPage);
 }
-
-btnPageDown.addEventListener("click", prevPage);
 
 function prevPage() {
   btnPageUp.addEventListener("click", nextPage);
@@ -234,4 +234,29 @@ function prevPage() {
 
 function removeEventListenerDown() {
   btnPageDown.removeEventListener("click", prevPage);
+}
+
+btnPageLast.addEventListener("click", showLastPage);
+
+function showLastPage() {
+  btnPageDown.addEventListener("click", prevPage);
+  removeEventListenerUp();
+  startInd = 40;
+  petsContainer.innerHTML = "";
+  renderPage(startInd);
+  currentPage = 6;
+  pageNum.innerHTML = currentPage;
+}
+
+btnPageFirst.addEventListener("click", showFirstPage);
+
+function showFirstPage() {
+  btnPageDown.addEventListener("click", prevPage);
+  btnPageUp.addEventListener("click", nextPage);
+  removeEventListenerDown();
+  startInd = 0;
+  petsContainer.innerHTML = "";
+  renderPage(startInd);
+  currentPage = 1;
+  pageNum.innerHTML = currentPage;
 }
