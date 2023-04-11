@@ -179,6 +179,8 @@ function renderPage(startInd) {
     let card = document.createElement("div");
     card.className = "pagination__card";
 
+    card.setAttribute("data-id", allPetsArr[arr48[i]].id);
+
     let image = document.createElement("img");
     image.className = "slider__img";
     image.alt = "our_friends";
