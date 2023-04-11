@@ -294,3 +294,94 @@ img {
   height: 100%;
   opacity: 1;
 }
+
+.pop-up {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // width: 300px;
+  // height: 220px;
+  cursor: pointer;
+  transition: all 0.9s;
+  z-index: 100;
+}
+
+.pop-up_active {
+  display: block;
+}
+
+.blackout-popUp {
+  background: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
+  z-index: 20;
+}
+
+.blackout-popUp_active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.modal__wrapper {
+  display: flex;
+  background-color: #fafafa;
+  padding: 20px;
+  width: 50vw;
+  height: 30vw;
+  text-align: justify;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.pop-up__img {
+  max-width: 100%;
+}
+
+.modal__text {
+  margin-left: 20px;
+}
+
+@media (max-width: 970px) {
+  .modal__wrapper {
+    height: 30vw;
+  }
+  .modal__text {
+    margin-left: 10px;
+  }
+  .pop-up__img {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal__wrapper {
+    height: 60vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .modal__wrapper {
+    height: 90vw;
+    width: 60vw;
+  }
+}
+
+// .popUp__btn-close {
+//   box-sizing: border-box;
+//   position: absolute;
+//   width: 52px;
+//   height: 52px;
+//   left: 621px;
+//   top: 0px;
+//   border: 2px solid #f1cdb3;
+//   border-radius: 100px;
+// }

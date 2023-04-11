@@ -151,6 +151,10 @@ function cardNext() {
     let card = document.createElement("div");
     card.className = "slider__card";
 
+    ////////////////
+    card.setAttribute("data-id", allPetsArr[nextArr[i]].id);
+    ///////////////////
+
     let image = document.createElement("img");
     image.className = "slider__img";
     image.alt = "our_friends";
@@ -185,6 +189,9 @@ function cardPrevious() {
   for (let i = 0; i < 3; i++) {
     let card = document.createElement("div");
     card.className = "slider__card";
+    ////////////////
+    card.setAttribute("data-id", allPetsArr[previousArr[i]].id);
+    ///////////////////
 
     let image = document.createElement("img");
     image.className = "slider__img";
@@ -302,6 +309,9 @@ function initSlider() {
   for (let i = 0; i < 3; i++) {
     let card = document.createElement("div");
     card.className = "slider__card";
+    ////////////////
+    card.setAttribute("data-id", allPetsArr[currentArr[i]].id);
+    ///////////////////
 
     let image = document.createElement("img");
     image.className = "slider__img";
