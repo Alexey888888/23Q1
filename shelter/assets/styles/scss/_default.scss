@@ -375,13 +375,17 @@ img {
   }
 }
 
-// .popUp__btn-close {
-//   box-sizing: border-box;
-//   position: absolute;
-//   width: 52px;
-//   height: 52px;
-//   left: 621px;
-//   top: 0px;
-//   border: 2px solid #f1cdb3;
-//   border-radius: 100px;
-// }
+.popUp__btn-close {
+  box-sizing: border-box;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  left: 100%;
+  top: -52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+}
+
+.popUp__btn-close:hover {
+  background-color: #f1cdb3;
+}

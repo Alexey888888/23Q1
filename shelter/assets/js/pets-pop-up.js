@@ -121,7 +121,7 @@ cardsP.forEach((el) => {
 function createModal(id) {
   //console.log(id);
   popUpP.innerHTML = `
-      <img src="../assets/icons/VectorX.svg" alt="close"></button>
+     
     <div class="modal__wrapper">
     <img src="${allPetsArrayP[id].img}" alt="" class="pop-up__img">
     <div class="modal__text">
@@ -140,7 +140,7 @@ function createModal(id) {
         <li class="modal__list-item"><b>Parasites:</b> ${allPetsArrayP[id].parasites}</li>
       </ul>
     </div>
-    
+    <button class="popUp__btn-close"><img src="../assets/icons/VectorX.svg"></button>
     </div>
     `;
   openModal();
@@ -152,6 +152,11 @@ function openModal() {
   popUpP.classList.toggle("pop-up_active");
   black.classList.toggle("blackout-popUp_active");
   // main.classList.toggle("scroll-lock");
+  const btnCloseP = document.querySelector(".popUp__btn-close");
+  btnCloseP.addEventListener("click", () => {
+    popUpP.classList.remove("pop-up_active");
+    black.classList.remove("blackout-popUp_active");
+  });
 }
 
 black.addEventListener("click", () => {
