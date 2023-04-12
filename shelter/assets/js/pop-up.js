@@ -106,8 +106,9 @@ const allPetsArray = [
 const cards = document.querySelectorAll(".slider__item");
 const popUp = document.querySelector(".pop-up");
 const black = document.querySelector(".blackout-popUp");
+//const btnClose = document.querySelector(".popUp__btn-close");
 
-//console.log(cards);
+//console.log(btnClose);
 
 cards.forEach((el) => {
   el.addEventListener("click", (e) => {
@@ -139,7 +140,7 @@ function createModal(id) {
       <li class="modal__list-item"><b>Parasites:</b> ${allPetsArray[id].parasites}</li>
     </ul>
   </div>
-  <button class="popUp__btn-close"></button>
+  <button class="popUp__btn-close"><img src="assets/icons/VectorX.svg"></button>
   </div>
   `;
   openModal();
@@ -151,6 +152,11 @@ function openModal() {
   popUp.classList.toggle("pop-up_active");
   black.classList.toggle("blackout-popUp_active");
   // main.classList.toggle("scroll-lock");
+  const btnClose = document.querySelector(".popUp__btn-close");
+  btnClose.addEventListener("click", () => {
+    popUp.classList.remove("pop-up_active");
+    black.classList.remove("blackout-popUp_active");
+  });
 }
 
 black.addEventListener("click", () => {
